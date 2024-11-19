@@ -2,28 +2,28 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "target": "ES6",
+
+    "rootDir": "src",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    // Generate sourcemaps
 
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "esModuleInterop": true,
-    
+
     "declaration": true,
-    "declarationDir": "dist",
-
-    "rootDir": "src", // Location of TypeScript files
+    "declarationDir": "dist", // Location of TypeScript files
     "outDir": "dist", // Location of compiled JavaScript files
-    "sourceMap": true, // Generate sourcemaps
-
-    "paths": {
-      "@/*": ["./src/*"],
-    },
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": [
     "src",
-    "types",
+    "types"
   ],
   "exclude": [
     "dist",
@@ -32,6 +32,6 @@
   ],
   "ts-node": {
     "esm": true,
-    "require": ["tsconfig-paths/register"],
-  }, 
+    "require": ["tsconfig-paths/register"]
+  }
 }

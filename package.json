@@ -1,13 +1,12 @@
 {
-  "name": "ts-eslint-base",
-  "version": "1.0.2",
-  "description": "",
+  "name": "@oliver139/eslint-config",
+  "version": "1.0.0",
+  "description": "Oliver's ESLint config preset powered by @antfu/eslint-config",
   "scripts": {
     "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
     "build:tsc": "tsc",
     "lint:check": "eslint . --cache",
     "lint": "eslint . --cache --fix",
-    "start": "tsx src/index.ts",
     "prepare": "simple-git-hooks"
   },
   "keywords": [],
@@ -21,6 +20,9 @@
     "bin",
     "dist"
   ],
+  "dependencies": {
+    "@antfu/eslint-config": "^3.9.2"
+  },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@rollup/plugin-json": "^6.1.0",

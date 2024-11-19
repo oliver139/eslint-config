@@ -1,9 +1,9 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
-    "source.sortImports": "explicit",
+    "source.sortImports": "explicit"
   },
   "eslint.options": {
-    "cache": true,
+    "cache": true
   }
 }

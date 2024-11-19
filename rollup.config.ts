@@ -1,19 +1,19 @@
-import del from "rollup-plugin-delete";
-import esbuild from "rollup-plugin-esbuild";
 import json from "@rollup/plugin-json";
+import del from "rollup-plugin-delete";
 import { dts } from "rollup-plugin-dts";
+import esbuild from "rollup-plugin-esbuild";
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        dir: "dist",
+        file: "dist/index.cjs",
         format: "cjs",
         sourcemap: false,
       },
       {
-        dir: "dist",
+        file: "dist/index.js",
         format: "esm",
         sourcemap: false,
       },

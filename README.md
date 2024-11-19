@@ -1,11 +1,8 @@
-# ts-eslint-base
+# @oliver139/eslint-config
 
-A well setup template for starting a typescript project. Used rollup as project bundler.  
-Linter will automatically run upon `git commit`.
+Oliver's ESLint config preset powered by `@antfu/eslint-config`
 
 ## Project Setup
-
-PNPM with node 18.18.2 is used.
 
 ```sh
 pnpm install
