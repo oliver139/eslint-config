@@ -51,7 +51,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
           "no-alert": "off",
           "no-console": "off",
           "no-lonely-if": "error",
-          "no-unused-vars": "warn",
+          "no-unused-vars": ["warn", { varsIgnorePattern: "^props$" }],
           "unused-imports/no-unused-imports": "off",
           "unused-imports/no-unused-vars": "off",
           "yoda": ["error", "never", { exceptRange: true }],
@@ -61,7 +61,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
         overrides: {
           "ts/no-empty-function": "warn",
           "ts/no-shadow": "error",
-          "ts/no-unused-vars": "warn",
+          "ts/no-unused-vars": ["warn", { varsIgnorePattern: "^props$" }],
         },
       },
       vue: {
