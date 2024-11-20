@@ -52,8 +52,8 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
           "no-console": "off",
           "no-lonely-if": "error",
           "no-unused-vars": "warn",
-          "unused-imports/no-unused-imports": "warn",
-          "unused-imports/no-unused-vars": "warn",
+          "unused-imports/no-unused-imports": "off",
+          "unused-imports/no-unused-vars": "off",
           "yoda": ["error", "never", { exceptRange: true }],
         },
       },
@@ -74,6 +74,11 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
           "vue/singleline-html-element-content-newline": "off",
           "vue/no-unused-refs": "warn",
           "vue/no-unused-vars": "warn",
+        },
+      },
+      test: {
+        overrides: {
+          "test/no-only-tests": "off",
         },
       },
     },
