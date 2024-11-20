@@ -2,6 +2,7 @@
   "name": "@oliver139/eslint-config",
   "type": "module",
   "version": "1.0.3",
+  "packageManager": "pnpm@9.13.2",
   "description": "Oliver's ESLint config preset powered by @antfu/eslint-config",
   "author": "Oliver Mak",
   "license": "MIT",
