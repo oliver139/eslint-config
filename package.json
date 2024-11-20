@@ -1,39 +1,62 @@
 {
   "name": "@oliver139/eslint-config",
+  "type": "module",
   "version": "1.0.0",
   "description": "Oliver's ESLint config preset powered by @antfu/eslint-config",
-  "scripts": {
-    "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
-    "build:tsc": "tsc",
-    "lint:check": "eslint . --cache",
-    "lint": "eslint . --cache --fix",
-    "prepare": "simple-git-hooks"
-  },
-  "keywords": [],
   "author": "Oliver Mak",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oliver139/ts-eslint-base"
+    "url": "https://github.com/oliver139/eslint-config"
   },
+  "keywords": [
+    "eslint-config"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "bin",
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup --config=rollup.config.ts --configPlugin rollup-plugin-esbuild",
+    "lint": "nr build && eslint . --cache --fix",
+    "lint:check": "nr build && eslint . --cache",
+    "lint:inspect": "nr build && eslint --inspect-config",
+    "prepare": "simple-git-hooks",
+    "prepack": "nr build",
+    "release": "bumpp && pnpm publish"
+  },
+  "peerDependencies": {
+    "eslint": "^9.10.0",
+    "eslint-plugin-vuejs-accessibility": ">=2.4.1"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-vuejs-accessibility": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@antfu/eslint-config": "^3.9.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
+    "@antfu/ni": "^0.23.1",
+    "@oliver139/eslint-config": "workspace:*",
     "@rollup/plugin-json": "^6.1.0",
-    "@rushstack/eslint-patch": "^1.10.4",
-    "@stylistic/eslint-plugin": "^2.11.0",
     "@tsconfig/recommended": "1.0.8",
-    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.9.0",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
+    "bumpp": "^9.8.1",
     "eslint": "^9.15.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "lint-staged": "^15.2.10",
     "rollup": "^4.27.3",
     "rollup-plugin-delete": "^2.1.0",
@@ -43,8 +66,7 @@
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.8.1",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.15.0"
+    "typescript": "^5.6.3"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
