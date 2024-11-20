@@ -51,7 +51,9 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
           "no-alert": "off",
           "no-console": "off",
           "no-lonely-if": "error",
-          "no-unused-vars": "off",
+          "no-unused-vars": "warn",
+          "unused-imports/no-unused-imports": "warn",
+          "unused-imports/no-unused-vars": "warn",
           "yoda": ["error", "never", { exceptRange: true }],
         },
       },
@@ -59,7 +61,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
         overrides: {
           "ts/no-empty-function": "warn",
           "ts/no-shadow": "error",
-          "ts/no-unused-vars": ["warn", { varsIgnorePattern: "^props$" }],
+          "ts/no-unused-vars": "warn",
         },
       },
       vue: {
@@ -70,6 +72,8 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
             multiline: 1,
           }],
           "vue/singleline-html-element-content-newline": "off",
+          "vue/no-unused-refs": "warn",
+          "vue/no-unused-vars": "warn",
         },
       },
     },
@@ -109,4 +113,3 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
 }
 
 export { eslintConfigBuilder };
-export default eslintConfigBuilder;

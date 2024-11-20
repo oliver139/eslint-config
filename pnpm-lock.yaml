@@ -15,9 +15,6 @@ importers:
       '@antfu/ni':
         specifier: ^0.23.1
         version: 0.23.1
-      '@oliver139/eslint-config':
-        specifier: workspace:*
-        version: 'link:'
       '@rollup/plugin-json':
         specifier: ^6.1.0
         version: 6.1.0(rollup@4.27.3)

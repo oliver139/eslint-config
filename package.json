@@ -50,7 +50,6 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.23.1",
-    "@oliver139/eslint-config": "workspace:*",
     "@rollup/plugin-json": "^6.1.0",
     "@tsconfig/recommended": "1.0.8",
     "@types/node": "^22.9.0",
@@ -72,8 +71,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,ts,mts,cts}": [
-      "eslint --cache --fix"
-    ]
+    "*": "eslint --cache --fix"
   }
 }

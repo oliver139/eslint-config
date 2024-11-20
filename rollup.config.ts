@@ -26,6 +26,10 @@ export default [
       }),
       json(),
     ],
+    external: [
+      "@antfu/eslint-config",
+      "eslint-plugin-vuejs-accessibility",
+    ],
   },
   {
     input: "src/index.ts",
