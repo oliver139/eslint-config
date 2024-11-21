@@ -29,8 +29,12 @@ jobs:
         run: npm install
 
       # Runs a single command using the runners shell
+      - name: Build the project
+        run: npm build
+
+      # Runs a single command using the runners shell
       - name: Try to build the ESLint config preview site
-        run: npx @eslint/config-inspector build
+        run: npx @eslint/config-inspector build --base "/eslint-config/"
 
       # use actions-gh-pages to deploy dist to gh-pages
       - name: Deploy
