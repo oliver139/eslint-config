@@ -33,7 +33,7 @@
     "lint": "nr build && eslint . --cache --fix",
     "lint:check": "nr build && eslint . --cache",
     "lint:inspect": "nr build && eslint --inspect-config",
-    "lint:gen": "eslint-config-inspector build --outDir docs",
+    "lint:gen": "eslint-config-inspector build --outDir docs --base \"/eslint-config/\"",
     "prepare": "simple-git-hooks",
     "prepack": "nr lint:gen && nr build",
     "release": "bumpp && pnpm publish"
