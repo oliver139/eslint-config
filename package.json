@@ -6,6 +6,7 @@
   "description": "Oliver's ESLint config preset powered by @antfu/eslint-config",
   "author": "Oliver Mak",
   "license": "MIT",
+  "homepage": "https://oliver139.github.io/eslint-config/",
   "repository": {
     "type": "git",
     "url": "https://github.com/oliver139/eslint-config"
