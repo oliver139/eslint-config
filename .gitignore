@@ -12,3 +12,6 @@ dist
 
 # Cache
 .eslintcache
+
+# Github Page
+.eslint-config-inspector
