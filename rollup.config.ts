@@ -43,10 +43,11 @@ export default [
         format: "esm",
       },
     ],
-    plugins: [dts({
+    plugins: [
+      dts({
       // https://github.com/Swatinem/rollup-plugin-dts/issues/143
-      compilerOptions: { preserveSymlinks: false },
-      respectExternal: true,
-    })],
+        compilerOptions: { preserveSymlinks: false },
+      }),
+    ],
   },
 ];
