@@ -30,7 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Try to build the ESLint config preview site
-        run: npx @eslint/config-inspector build --base "/eslint-config/"
+        run: pwd && ls && npx @eslint/config-inspector build --base "/eslint-config/"
 
       # use actions-gh-pages to deploy dist to gh-pages
       - name: Deploy
