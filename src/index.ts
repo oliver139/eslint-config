@@ -23,6 +23,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
       type: mergedOptions.type,
       ignores: [
         "**/fixtures",
+        "docs/",
       ],
       stylistic: {
         indent: 2,
