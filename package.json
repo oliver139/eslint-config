@@ -33,7 +33,7 @@
     "lint": "nr build && eslint . --cache --fix",
     "lint:check": "nr build && eslint . --cache",
     "lint:inspect": "nr build && eslint --inspect-config",
-    "lint:gen": "eslint-config-inspector build --config \"./eslint.config.mjs\" --base \"/eslint-config/\"",
+    "lint:gen": "nlx @eslint/config-inspector build --base \"/eslint-config/\"",
     "prepare": "simple-git-hooks",
     "prepack": "nr lint:gen && nr build",
     "release": "bumpp && pnpm publish"
@@ -52,7 +52,6 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.23.1",
-    "@eslint/config-inspector": "^0.5.6",
     "@rollup/plugin-json": "^6.1.0",
     "@tsconfig/recommended": "1.0.8",
     "@types/node": "^22.9.0",

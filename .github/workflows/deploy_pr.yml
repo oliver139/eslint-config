@@ -30,7 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Try to build the ESLint config preview site
-        run: npm run lint:gen
+        run: npx @eslint/config-inspector build --base "/eslint-config/"
 
       # use actions-gh-pages to deploy dist to gh-pages
       - name: Deploy
@@ -39,3 +39,4 @@ jobs:
           # github will auto-generate a token for this job and use it
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./.eslint-config-inspector
+          publish_branch: config-preview
