@@ -2,25 +2,17 @@
 
 name: Deploy github page on success PR
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [main]
   pull_request:
     types: [closed]
     branches: [main]
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build_and_deploy:
-    # Only if merged
-    if: github.event.pull_request.merged == true
 
-    # The type of runner that the job will run on
+jobs:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
