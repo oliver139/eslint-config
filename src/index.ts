@@ -70,6 +70,12 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
       },
       vue: {
         overrides: {
+          "vue/block-order": ["error", {
+            order: [
+              ["script", "template"],
+              "style",
+            ],
+          }],
           "vue/no-console": "error",
           "vue/max-attributes-per-line": ["warn", {
             singleline: 3,
