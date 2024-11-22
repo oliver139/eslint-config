@@ -3,8 +3,9 @@ import { antfu, ensurePackages, interopDefault } from "@antfu/eslint-config";
 interface configOptions {
   type: "app" | "lib",
   vueA11y: boolean,
-  quotes: "single" | "double",
+  quotes: "single" | "double" | "backtick",
   semicolon: boolean,
+  ignores: string[],
 }
 async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promise<ReturnType<typeof antfu>> {
   const defaultOptions: configOptions = {
@@ -12,6 +13,11 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
     vueA11y: false,
     quotes: "double",
     semicolon: true,
+    ignores: [
+      "**/fixtures",
+      "dist/",
+      "docs/",
+    ],
   };
   const mergedOptions: configOptions = {
     ...defaultOptions,
@@ -21,10 +27,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
   const configPara: Parameters<typeof antfu> = [
     {
       type: mergedOptions.type,
-      ignores: [
-        "**/fixtures",
-        "docs/",
-      ],
+      ignores: mergedOptions.ignores,
       stylistic: {
         indent: 2,
         quotes: mergedOptions.quotes,

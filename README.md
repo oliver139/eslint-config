@@ -45,10 +45,17 @@ export default await eslintConfigBuilder({
   vueA11y: false,
 
   // Quote style
-  quotes: "double", // or "single"
+  quotes: "double", // "single", or "backtick"
 
   // Add semicolon or not
   semicolon: true,
+
+  // Files or directories to be ignored
+  ignores: [
+    "**/fixtures",
+    "dist/",
+    "docs/",
+  ],
 });
 ```
 
