@@ -2625,8 +2625,10 @@
           "error",
           {
             "order": [
-              "script",
-              "template",
+              [
+                "script",
+                "template"
+              ],
               "style"
             ]
           }
@@ -22147,7 +22149,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1732289989010,
+    "lastUpdate": 1732299093364,
     "basePath": "",
     "configPath": ""
   }
