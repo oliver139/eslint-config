@@ -231,6 +231,7 @@
           "CSSKeywordValue": false,
           "CSSLayerBlockRule": false,
           "CSSLayerStatementRule": false,
+          "CSSMarginRule": false,
           "CSSMathClamp": false,
           "CSSMathInvert": false,
           "CSSMathMax": false,
@@ -1196,12 +1197,15 @@
           "XRDepthInformation": false,
           "XRDOMOverlayState": false,
           "XRFrame": false,
+          "XRHand": false,
           "XRHitTestResult": false,
           "XRHitTestSource": false,
           "XRInputSource": false,
           "XRInputSourceArray": false,
           "XRInputSourceEvent": false,
           "XRInputSourcesChangeEvent": false,
+          "XRJointPose": false,
+          "XRJointSpace": false,
           "XRLayer": false,
           "XRLightEstimate": false,
           "XRLightProbe": false,
@@ -1715,14 +1719,12 @@
               [
                 "parent-type",
                 "sibling-type",
-                "index-type"
+                "index-type",
+                "internal-type"
               ],
               "builtin",
               "external",
-              [
-                "internal",
-                "internal-type"
-              ],
+              "internal",
               [
                 "parent",
                 "sibling",
@@ -2471,10 +2473,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.15.0",
+            "version": "8.18.1",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.15.0"
+              "version": "8.18.1"
             }
           },
           "sourceType": "module"
@@ -3488,6 +3490,7 @@
           "CSSKeywordValue": false,
           "CSSLayerBlockRule": false,
           "CSSLayerStatementRule": false,
+          "CSSMarginRule": false,
           "CSSMathClamp": false,
           "CSSMathInvert": false,
           "CSSMathMax": false,
@@ -4453,12 +4456,15 @@
           "XRDepthInformation": false,
           "XRDOMOverlayState": false,
           "XRFrame": false,
+          "XRHand": false,
           "XRHitTestResult": false,
           "XRHitTestSource": false,
           "XRInputSource": false,
           "XRInputSourceArray": false,
           "XRInputSourceEvent": false,
           "XRInputSourcesChangeEvent": false,
+          "XRJointPose": false,
+          "XRJointSpace": false,
           "XRLayer": false,
           "XRLightEstimate": false,
           "XRLightProbe": false,
@@ -4629,6 +4635,7 @@
           "CSSKeywordValue": false,
           "CSSLayerBlockRule": false,
           "CSSLayerStatementRule": false,
+          "CSSMarginRule": false,
           "CSSMathClamp": false,
           "CSSMathInvert": false,
           "CSSMathMax": false,
@@ -5594,12 +5601,15 @@
           "XRDepthInformation": false,
           "XRDOMOverlayState": false,
           "XRFrame": false,
+          "XRHand": false,
           "XRHitTestResult": false,
           "XRHitTestSource": false,
           "XRInputSource": false,
           "XRInputSourceArray": false,
           "XRInputSourceEvent": false,
           "XRInputSourcesChangeEvent": false,
+          "XRJointPose": false,
+          "XRJointSpace": false,
           "XRLayer": false,
           "XRLightEstimate": false,
           "XRLightProbe": false,
@@ -5992,7 +6002,7 @@
     "default-case-last": {
       "type": "suggestion",
       "docs": {
-        "description": "Enforce default clauses in switch statements to be last",
+        "description": "Enforce `default` clauses in switch statements to be last",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/default-case-last"
       },
@@ -6066,7 +6076,7 @@
     "for-direction": {
       "type": "problem",
       "docs": {
-        "description": "Enforce \"for\" loop update clause moving the counter in the right direction",
+        "description": "Enforce `for` loop update clause moving the counter in the right direction",
         "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/for-direction"
       },
@@ -6170,7 +6180,9 @@
     "getter-return": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "allowImplicit": false
+        }
       ],
       "docs": {
         "description": "Enforce `return` statements in getters",
@@ -6259,7 +6271,8 @@
         {
           "exceptionPatterns": [],
           "exceptions": [],
-          "min": 2
+          "min": 2,
+          "properties": "always"
         }
       ],
       "docs": {
@@ -6274,7 +6287,12 @@
       "type": "suggestion",
       "defaultOptions": [
         "^.+$",
-        {}
+        {
+          "classFields": false,
+          "ignoreDestructuring": false,
+          "onlyDeclarations": false,
+          "properties": false
+        }
       ],
       "docs": {
         "description": "Require identifiers to match a specified regular expression",
@@ -6705,7 +6723,8 @@
       "type": "suggestion",
       "defaultOptions": [
         {
-          "allow": []
+          "allow": [],
+          "int32Hint": false
         }
       ],
       "docs": {
@@ -6776,7 +6795,7 @@
     "no-compare-neg-zero": {
       "type": "problem",
       "docs": {
-        "description": "Disallow comparing against -0",
+        "description": "Disallow comparing against `-0`",
         "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/no-compare-neg-zero"
       },
@@ -6975,7 +6994,9 @@
     "no-duplicate-imports": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "includeExports": false
+        }
       ],
       "docs": {
         "description": "Disallow duplicate module imports",
@@ -7045,7 +7066,9 @@
     "no-empty-pattern": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "allowObjectPatternsAsParameters": false
+        }
       ],
       "docs": {
         "description": "Disallow empty destructuring patterns",
@@ -7078,7 +7101,9 @@
     "no-eval": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "allowIndirect": false
+        }
       ],
       "docs": {
         "description": "Disallow the use of `eval()`",
@@ -7253,7 +7278,9 @@
     "no-implicit-globals": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "lexicalBindings": false
+        }
       ],
       "docs": {
         "description": "Disallow declarations in the global scope",
@@ -7299,7 +7326,10 @@
     "no-inner-declarations": {
       "type": "problem",
       "defaultOptions": [
-        "functions"
+        "functions",
+        {
+          "blockScopedFunctions": "allow"
+        }
       ],
       "docs": {
         "description": "Disallow variable or `function` declarations in nested blocks",
@@ -7493,7 +7523,9 @@
     "no-multi-assign": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "ignoreNonDeclaration": false
+        }
       ],
       "docs": {
         "description": "Disallow use of chained assignment expressions",
@@ -7722,7 +7754,7 @@
     "no-param-reassign": {
       "type": "suggestion",
       "docs": {
-        "description": "Disallow reassigning `function` parameters",
+        "description": "Disallow reassigning function parameters",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-param-reassign"
       },
@@ -7744,7 +7776,9 @@
     "no-plusplus": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "allowForLoopAfterthoughts": false
+        }
       ],
       "docs": {
         "description": "Disallow the unary operators `++` and `--`",
@@ -7781,7 +7815,9 @@
     "no-promise-executor-return": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "allowVoid": false
+        }
       ],
       "docs": {
         "description": "Disallow returning values from Promise executor functions",
@@ -7931,7 +7967,7 @@
     "no-script-url": {
       "type": "suggestion",
       "docs": {
-        "description": "Disallow `javascript:` urls",
+        "description": "Disallow `javascript:` URLs",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/no-script-url"
       },
@@ -7993,7 +8029,9 @@
       "defaultOptions": [
         {
           "allow": [],
-          "hoist": "functions"
+          "builtinGlobals": false,
+          "hoist": "functions",
+          "ignoreOnInitialization": false
         }
       ],
       "docs": {
@@ -8119,7 +8157,9 @@
     "no-undef": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "typeof": false
+        }
       ],
       "docs": {
         "description": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments",
@@ -8161,6 +8201,7 @@
           "allowFunctionParams": true,
           "allowInArrayDestructuring": true,
           "allowInObjectDestructuring": true,
+          "enforceInClassFields": false,
           "enforceInMethodNames": false
         }
       ],
@@ -8246,7 +8287,9 @@
     "no-unsafe-negation": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "enforceForOrderingRelations": false
+        }
       ],
       "docs": {
         "description": "Disallow negating the left operand of relational operators",
@@ -8261,7 +8304,9 @@
     "no-unsafe-optional-chaining": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "disallowArithmeticOperators": false
+        }
       ],
       "docs": {
         "description": "Disallow use of optional chaining in contexts where the `undefined` value is not allowed",
@@ -8318,6 +8363,7 @@
         "recommended": true,
         "url": "https://eslint.org/docs/latest/rules/no-unused-vars"
       },
+      "hasSuggestions": true,
       "name": "no-unused-vars",
       "plugin": "eslint"
     },
@@ -8332,7 +8378,8 @@
         {
           "classes": true,
           "functions": true,
-          "variables": true
+          "variables": true,
+          "allowNamedExports": false
         }
       ],
       "name": "no-use-before-define",
@@ -8429,7 +8476,11 @@
     "no-useless-rename": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "ignoreDestructuring": false,
+          "ignoreImport": false,
+          "ignoreExport": false
+        }
       ],
       "docs": {
         "description": "Disallow renaming import, export, and destructured assignments to the same name",
@@ -8465,7 +8516,9 @@
     "no-void": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "allowAsStatement": false
+        }
       ],
       "docs": {
         "description": "Disallow `void` operators",
@@ -8679,7 +8732,8 @@
       "type": "suggestion",
       "defaultOptions": [
         {
-          "destructuring": "any"
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
         }
       ],
       "docs": {
@@ -8749,7 +8803,7 @@
     "prefer-object-spread": {
       "type": "suggestion",
       "docs": {
-        "description": "Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead",
+        "description": "Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/prefer-object-spread"
       },
@@ -8760,7 +8814,9 @@
     "prefer-promise-reject-errors": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "allowEmptyReject": false
+        }
       ],
       "docs": {
         "description": "Require using Error objects as Promise rejection reasons",
@@ -8786,7 +8842,9 @@
     "prefer-regex-literals": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "disallowRedundantWrapping": false
+        }
       ],
       "docs": {
         "description": "Disallow use of the `RegExp` constructor in favor of regular expression literals",
@@ -8872,7 +8930,9 @@
     "require-atomic-updates": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "allowProperties": false
+        }
       ],
       "docs": {
         "description": "Disallow assignments that can lead to race conditions due to usage of `await` or `yield`",
@@ -8897,7 +8957,7 @@
     "require-unicode-regexp": {
       "type": "suggestion",
       "docs": {
-        "description": "Enforce the use of `u` or `v` flag on RegExp",
+        "description": "Enforce the use of `u` or `v` flag on regular expressions",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/require-unicode-regexp"
       },
@@ -8999,6 +9059,7 @@
         {
           "allowLineSeparatedGroups": false,
           "caseSensitive": true,
+          "ignoreComputedKeys": false,
           "minKeys": 2,
           "natural": false
         }
@@ -9014,7 +9075,9 @@
     "sort-vars": {
       "type": "suggestion",
       "defaultOptions": [
-        {}
+        {
+          "ignoreCase": false
+        }
       ],
       "docs": {
         "description": "Require variables within the same declaration block to be sorted",
@@ -9201,7 +9264,9 @@
     "valid-typeof": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "requireStringLiterals": false
+        }
       ],
       "docs": {
         "description": "Enforce comparing `typeof` expressions against valid strings",
@@ -10515,7 +10580,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure imports point to a file/module that can be resolved.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-unresolved.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unresolved.md"
       },
       "name": "import/no-unresolved",
       "plugin": "import"
@@ -10525,7 +10590,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure named imports correspond to a named export in the remote file.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/named.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/named.md"
       },
       "name": "import/named",
       "plugin": "import"
@@ -10535,7 +10600,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure a default export is present, given a default import.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/default.md"
       },
       "name": "import/default",
       "plugin": "import"
@@ -10545,7 +10610,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure imported namespaces contain dereferenced properties as they are dereferenced.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/namespace.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/namespace.md"
       },
       "name": "import/namespace",
       "plugin": "import"
@@ -10555,7 +10620,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid namespace (a.k.a. \"wildcard\" `*`) imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-namespace.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-namespace.md"
       },
       "fixable": "code",
       "name": "import/no-namespace",
@@ -10566,7 +10631,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid any invalid exports, i.e. re-export of the same name.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/export.md"
       },
       "name": "import/export",
       "plugin": "import"
@@ -10576,7 +10641,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid the use of mutable exports with `var` or `let`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-mutable-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-mutable-exports.md"
       },
       "name": "import/no-mutable-exports",
       "plugin": "import"
@@ -10586,7 +10651,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure consistent use of file extension within the import path.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/extensions.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/extensions.md"
       },
       "name": "import/extensions",
       "plugin": "import"
@@ -10596,7 +10661,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Enforce which files can be imported in a given folder.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-restricted-paths.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-restricted-paths.md"
       },
       "name": "import/no-restricted-paths",
       "plugin": "import"
@@ -10606,7 +10671,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing the submodules of other modules.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-internal-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-internal-modules.md"
       },
       "name": "import/no-internal-modules",
       "plugin": "import"
@@ -10616,7 +10681,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Prefer named exports to be grouped together in a single export declaration.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/group-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/group-exports.md"
       },
       "name": "import/group-exports",
       "plugin": "import"
@@ -10626,7 +10691,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing packages through relative paths.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-relative-packages.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-relative-packages.md"
       },
       "fixable": "code",
       "name": "import/no-relative-packages",
@@ -10637,7 +10702,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing modules from parent directories.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-relative-parent-imports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-relative-parent-imports.md"
       },
       "name": "import/no-relative-parent-imports",
       "plugin": "import"
@@ -10647,7 +10712,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce or ban the use of inline type-only markers for named imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/consistent-type-specifier-style.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/consistent-type-specifier-style.md"
       },
       "fixable": "code",
       "name": "import/consistent-type-specifier-style",
@@ -10659,7 +10724,7 @@
         "category": "Static analysis",
         "description": "Forbid a module from importing itself.",
         "recommended": true,
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-self-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-self-import.md"
       },
       "name": "import/no-self-import",
       "plugin": "import"
@@ -10669,7 +10734,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid a module from importing a module with a dependency path back to itself.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-cycle.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-cycle.md"
       },
       "name": "import/no-cycle",
       "plugin": "import"
@@ -10679,7 +10744,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid named default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-named-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-default.md"
       },
       "name": "import/no-named-default",
       "plugin": "import"
@@ -10689,7 +10754,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid use of exported name as identifier of default export.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-named-as-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-as-default.md"
       },
       "name": "import/no-named-as-default",
       "plugin": "import"
@@ -10699,7 +10764,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid use of exported name as property of default export.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-named-as-default-member.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-as-default-member.md"
       },
       "name": "import/no-named-as-default-member",
       "plugin": "import"
@@ -10709,7 +10774,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid anonymous values as default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-anonymous-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-anonymous-default-export.md"
       },
       "name": "import/no-anonymous-default-export",
       "plugin": "import"
@@ -10719,7 +10784,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid importing a default export by a different name.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-rename-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-rename-default.md"
       },
       "name": "import/no-rename-default",
       "plugin": "import"
@@ -10729,7 +10794,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid modules without exports, or exports without matching import in another module.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-unused-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unused-modules.md"
       },
       "name": "import/no-unused-modules",
       "plugin": "import"
@@ -10739,7 +10804,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid CommonJS `require` calls and `module.exports` or `exports.*`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-commonjs.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-commonjs.md"
       },
       "name": "import/no-commonjs",
       "plugin": "import"
@@ -10749,7 +10814,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid AMD `require` and `define` calls.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-amd.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-amd.md"
       },
       "name": "import/no-amd",
       "plugin": "import"
@@ -10759,7 +10824,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid repeated import of the same module in multiple places.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-duplicates.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-duplicates.md"
       },
       "fixable": "code",
       "name": "import/no-duplicates",
@@ -10770,7 +10835,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure all imports appear before other statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/first.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/first.md"
       },
       "fixable": "code",
       "name": "import/first",
@@ -10781,7 +10846,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce the maximum number of dependencies a module can have.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/max-dependencies.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/max-dependencies.md"
       },
       "name": "import/max-dependencies",
       "plugin": "import"
@@ -10791,7 +10856,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid the use of extraneous packages.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-extraneous-dependencies.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-extraneous-dependencies.md"
       },
       "name": "import/no-extraneous-dependencies",
       "plugin": "import"
@@ -10801,7 +10866,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid import of modules using absolute paths.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-absolute-path.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-absolute-path.md"
       },
       "fixable": "code",
       "name": "import/no-absolute-path",
@@ -10812,7 +10877,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid Node.js builtin modules.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-nodejs-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-nodejs-modules.md"
       },
       "name": "import/no-nodejs-modules",
       "plugin": "import"
@@ -10822,7 +10887,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid webpack loader syntax in imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-webpack-loader-syntax.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-webpack-loader-syntax.md"
       },
       "name": "import/no-webpack-loader-syntax",
       "plugin": "import"
@@ -10832,7 +10897,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a convention in module import order.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/order.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/order.md"
       },
       "fixable": "code",
       "name": "import/order",
@@ -10843,7 +10908,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a newline after import statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/newline-after-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/newline-after-import.md"
       },
       "fixable": "whitespace",
       "name": "import/newline-after-import",
@@ -10854,7 +10919,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Prefer a default export if module exports a single name or multiple names.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/prefer-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/prefer-default-export.md"
       },
       "name": "import/prefer-default-export",
       "plugin": "import"
@@ -10864,7 +10929,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-default-export.md"
       },
       "name": "import/no-default-export",
       "plugin": "import"
@@ -10874,7 +10939,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid named exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-named-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-export.md"
       },
       "name": "import/no-named-export",
       "plugin": "import"
@@ -10884,7 +10949,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid `require()` calls with expressions.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-dynamic-require.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-dynamic-require.md"
       },
       "name": "import/no-dynamic-require",
       "plugin": "import"
@@ -10894,7 +10959,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid potentially ambiguous parse goal (`script` vs. `module`).",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/unambiguous.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/unambiguous.md"
       },
       "name": "import/unambiguous",
       "plugin": "import"
@@ -10904,7 +10969,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid unassigned imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-unassigned-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unassigned-import.md"
       },
       "name": "import/no-unassigned-import",
       "plugin": "import"
@@ -10914,7 +10979,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid unnecessary path segments in import and require statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-useless-path-segments.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-useless-path-segments.md"
       },
       "fixable": "code",
       "name": "import/no-useless-path-segments",
@@ -10925,7 +10990,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a leading comment with the webpackChunkName for dynamic imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/dynamic-import-chunkname.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/dynamic-import-chunkname.md"
       },
       "hasSuggestions": true,
       "name": "import/dynamic-import-chunkname",
@@ -10937,7 +11002,7 @@
         "category": "Module systems",
         "description": "Forbid import statements with CommonJS module.exports.",
         "recommended": true,
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-import-module-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-import-module-exports.md"
       },
       "fixable": "code",
       "name": "import/no-import-module-exports",
@@ -10948,7 +11013,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid empty named import blocks.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-empty-named-blocks.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-empty-named-blocks.md"
       },
       "fixable": "code",
       "hasSuggestions": true,
@@ -10960,7 +11025,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure all exports appear after other statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/exports-last.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/exports-last.md"
       },
       "name": "import/exports-last",
       "plugin": "import"
@@ -10970,7 +11035,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid imported names marked with `@deprecated` documentation tag.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/no-deprecated.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-deprecated.md"
       },
       "name": "import/no-deprecated",
       "plugin": "import"
@@ -10980,7 +11045,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Replaced by `import-x/first`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.4.3/docs/rules/imports-first.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/imports-first.md"
       },
       "fixable": "code",
       "deprecated": true,
@@ -10998,213 +11063,221 @@
       "plugin": "command"
     },
     "perfectionist/sort-variable-declarations": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-variable-declarations",
         "description": "Enforce sorted variable declarations.",
-        "url": "https://perfectionist.dev/rules/sort-variable-declarations"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-variable-declarations",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-intersection-types": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-intersection-types",
         "description": "Enforce sorted intersection types.",
-        "url": "https://perfectionist.dev/rules/sort-intersection-types"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-intersection-types",
       "plugin": "perfectionist"
     },
-    "perfectionist/sort-svelte-attributes": {
-      "type": "suggestion",
+    "perfectionist/sort-heritage-clauses": {
       "docs": {
-        "description": "Enforce sorted Svelte attributes.",
-        "url": "https://perfectionist.dev/rules/sort-svelte-attributes"
+        "url": "https://perfectionist.dev/rules/sort-heritage-clauses",
+        "description": "Enforce sorted heritage clauses.",
+        "recommended": true
       },
-      "fixable": "code",
-      "deprecated": true,
-      "replacedBy": [
-        "svelte/sort-attributes"
-      ],
-      "name": "perfectionist/sort-svelte-attributes",
-      "plugin": "perfectionist"
-    },
-    "perfectionist/sort-astro-attributes": {
       "type": "suggestion",
-      "docs": {
-        "description": "Enforce sorted Astro attributes.",
-        "url": "https://perfectionist.dev/rules/sort-astro-attributes"
-      },
       "fixable": "code",
-      "deprecated": true,
-      "replacedBy": [
-        "astro/sort-attributes"
-      ],
-      "name": "perfectionist/sort-astro-attributes",
-      "plugin": "perfectionist"
-    },
-    "perfectionist/sort-vue-attributes": {
-      "type": "suggestion",
-      "docs": {
-        "description": "Enforce sorted Vue attributes.",
-        "url": "https://perfectionist.dev/rules/sort-vue-attributes"
-      },
-      "fixable": "code",
-      "deprecated": true,
-      "replacedBy": [
-        "vue/attributes-order"
-      ],
-      "name": "perfectionist/sort-vue-attributes",
+      "name": "perfectionist/sort-heritage-clauses",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-array-includes": {
-      "type": "suggestion",
       "docs": {
         "description": "Enforce sorted arrays before include method.",
-        "url": "https://perfectionist.dev/rules/sort-array-includes"
+        "url": "https://perfectionist.dev/rules/sort-array-includes",
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-array-includes",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-named-imports": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-named-imports",
         "description": "Enforce sorted named imports.",
-        "url": "https://perfectionist.dev/rules/sort-named-imports"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-named-imports",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-named-exports": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-named-exports",
         "description": "Enforce sorted named exports.",
-        "url": "https://perfectionist.dev/rules/sort-named-exports"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-named-exports",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-object-types": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-object-types",
         "description": "Enforce sorted object types.",
-        "url": "https://perfectionist.dev/rules/sort-object-types"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-object-types",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-union-types": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-union-types",
         "description": "Enforce sorted union types.",
-        "url": "https://perfectionist.dev/rules/sort-union-types"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-union-types",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-switch-case": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-switch-case",
         "description": "Enforce sorted switch cases.",
-        "url": "https://perfectionist.dev/rules/sort-switch-case"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-switch-case",
       "plugin": "perfectionist"
     },
-    "perfectionist/sort-interfaces": {
-      "type": "suggestion",
+    "perfectionist/sort-decorators": {
       "docs": {
-        "description": "Enforce sorted interface properties.",
-        "url": "https://perfectionist.dev/rules/sort-interfaces"
+        "url": "https://perfectionist.dev/rules/sort-decorators",
+        "description": "Enforce sorted decorators.",
+        "recommended": true
       },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-decorators",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-interfaces": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-interfaces",
+        "description": "Enforce sorted interface properties.",
+        "recommended": true
+      },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-interfaces",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-jsx-props": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-jsx-props",
         "description": "Enforce sorted JSX props.",
-        "url": "https://perfectionist.dev/rules/sort-jsx-props"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-jsx-props",
       "plugin": "perfectionist"
     },
-    "perfectionist/sort-classes": {
-      "type": "suggestion",
+    "perfectionist/sort-modules": {
       "docs": {
-        "description": "Enforce sorted classes.",
-        "url": "https://perfectionist.dev/rules/sort-classes"
+        "url": "https://perfectionist.dev/rules/sort-modules",
+        "description": "Enforce sorted modules.",
+        "recommended": true
       },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-modules",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-classes": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-classes",
+        "description": "Enforce sorted classes.",
+        "recommended": true
+      },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-classes",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-imports": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-imports",
         "description": "Enforce sorted imports.",
-        "url": "https://perfectionist.dev/rules/sort-imports"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-imports",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-exports": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-exports",
         "description": "Enforce sorted exports.",
-        "url": "https://perfectionist.dev/rules/sort-exports"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-exports",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-objects": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-objects",
         "description": "Enforce sorted objects.",
-        "url": "https://perfectionist.dev/rules/sort-objects"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-objects",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-enums": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-enums",
         "description": "Enforce sorted TypeScript enums.",
-        "url": "https://perfectionist.dev/rules/sort-enums"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-enums",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-sets": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-sets",
         "description": "Enforce sorted sets.",
-        "url": "https://perfectionist.dev/rules/sort-sets"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-sets",
       "plugin": "perfectionist"
     },
     "perfectionist/sort-maps": {
-      "type": "suggestion",
       "docs": {
+        "url": "https://perfectionist.dev/rules/sort-maps",
         "description": "Enforce sorted Map elements.",
-        "url": "https://perfectionist.dev/rules/sort-maps"
+        "recommended": true
       },
+      "type": "suggestion",
       "fixable": "code",
       "name": "perfectionist/sort-maps",
       "plugin": "perfectionist"
@@ -13815,7 +13888,7 @@
     "ts/non-nullable-type-assertion-style": {
       "type": "suggestion",
       "docs": {
-        "description": "Enforce non-null assertions over explicit type casts",
+        "description": "Enforce non-null assertions over explicit type assertions",
         "recommended": "stylistic",
         "requiresTypeChecking": true,
         "url": "https://typescript-eslint.io/rules/non-nullable-type-assertion-style"
@@ -14007,7 +14080,7 @@
     "ts/prefer-reduce-type-parameter": {
       "type": "problem",
       "docs": {
-        "description": "Enforce using type parameter when calling `Array#reduce` instead of casting",
+        "description": "Enforce using type parameter when calling `Array#reduce` instead of using a type assertion",
         "recommended": "strict",
         "requiresTypeChecking": true,
         "url": "https://typescript-eslint.io/rules/prefer-reduce-type-parameter"
@@ -16675,6 +16748,7 @@
         "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md"
       },
       "type": "suggestion",
+      "fixable": "code",
       "name": "test/valid-expect",
       "plugin": "test"
     },
@@ -18238,7 +18312,9 @@
     "vue/no-empty-pattern": {
       "type": "problem",
       "defaultOptions": [
-        {}
+        {
+          "allowObjectPatternsAsParameters": false
+        }
       ],
       "docs": {
         "description": "Disallow empty destructuring patterns in `<template>`",
@@ -19321,7 +19397,7 @@
     "vue/prefer-use-template-ref": {
       "type": "suggestion",
       "docs": {
-        "description": "require using `useTemplateRef` instead of `ref` for template refs",
+        "description": "require using `useTemplateRef` instead of `ref`/`shallowRef` for template refs",
         "url": "https://eslint.vuejs.org/rules/prefer-use-template-ref.html"
       },
       "name": "vue/prefer-use-template-ref",
@@ -19600,6 +19676,16 @@
       "name": "vue/require-valid-default-prop",
       "plugin": "vue"
     },
+    "vue/restricted-component-names": {
+      "type": "problem",
+      "docs": {
+        "description": "enforce using only specific component names",
+        "url": "https://eslint.vuejs.org/rules/restricted-component-names.html"
+      },
+      "fixable": null,
+      "name": "vue/restricted-component-names",
+      "plugin": "vue"
+    },
     "vue/return-in-computed-property": {
       "type": "problem",
       "docs": {
@@ -19660,6 +19746,16 @@
       },
       "fixable": "whitespace",
       "name": "vue/singleline-html-element-content-newline",
+      "plugin": "vue"
+    },
+    "vue/slot-name-casing": {
+      "type": "suggestion",
+      "docs": {
+        "description": "enforce specific casing for slot names",
+        "url": "https://eslint.vuejs.org/rules/slot-name-casing.html"
+      },
+      "fixable": null,
+      "name": "vue/slot-name-casing",
       "plugin": "vue"
     },
     "vue/sort-keys": {
@@ -22149,7 +22245,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1732299093364,
+    "lastUpdate": 1734478602316,
     "basePath": "",
     "configPath": ""
   }
