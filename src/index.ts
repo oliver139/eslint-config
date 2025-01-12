@@ -5,6 +5,7 @@ interface configOptions {
   vueA11y: boolean,
   quotes: "single" | "double" | "backtick",
   semicolon: boolean,
+  vueBlockOrder: (string | string[])[],
   ignores: string[],
 }
 async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promise<ReturnType<typeof antfu>> {
@@ -13,6 +14,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
     vueA11y: false,
     quotes: "double",
     semicolon: true,
+    vueBlockOrder: ["template", "script", "style"],
     ignores: [
       "**/fixtures",
       "dist/",
@@ -71,10 +73,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
       vue: {
         overrides: {
           "vue/block-order": ["error", {
-            order: [
-              ["script", "template"],
-              "style",
-            ],
+            order: mergedOptions.vueBlockOrder,
           }],
           "vue/no-console": "error",
           "vue/max-attributes-per-line": ["warn", {

@@ -50,6 +50,9 @@ export default await eslintConfigBuilder({
   // Add semicolon or not
   semicolon: true,
 
+  // The block order in vue file
+  vueBlockOrder: ["template", "script", "style"],
+
   // Files or directories to be ignored
   ignores: [
     "**/fixtures",
