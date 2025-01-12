@@ -2473,10 +2473,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.18.1",
+            "version": "8.19.1",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.18.1"
+              "version": "8.19.1"
             }
           },
           "sourceType": "module"
@@ -2627,10 +2627,8 @@
           "error",
           {
             "order": [
-              [
-                "script",
-                "template"
-              ],
+              "template",
+              "script",
               "style"
             ]
           }
@@ -5743,6 +5741,7 @@
       "docs": {
         "description": "Require braces around arrow function bodies",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/arrow-body-style"
       },
       "fixable": "code",
@@ -5837,6 +5836,7 @@
       "docs": {
         "description": "Enforce camelcase naming convention",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/camelcase"
       },
       "name": "camelcase",
@@ -5847,6 +5847,7 @@
       "docs": {
         "description": "Enforce or disallow capitalization of the first letter of a comment",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/capitalized-comments"
       },
       "fixable": "code",
@@ -5954,6 +5955,7 @@
       "docs": {
         "description": "Enforce consistent naming when capturing the current execution context",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/consistent-this"
       },
       "defaultOptions": [
@@ -5977,6 +5979,7 @@
       "docs": {
         "description": "Enforce consistent brace style for all control statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/curly"
       },
       "defaultOptions": [
@@ -6002,7 +6005,7 @@
     "default-case-last": {
       "type": "suggestion",
       "docs": {
-        "description": "Enforce `default` clauses in switch statements to be last",
+        "description": "Enforce `default` clauses in `switch` statements to be last",
         "recommended": false,
         "url": "https://eslint.org/docs/latest/rules/default-case-last"
       },
@@ -6014,6 +6017,7 @@
       "docs": {
         "description": "Enforce default parameters to be last",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/default-param-last"
       },
       "name": "default-param-last",
@@ -6043,6 +6047,7 @@
       "docs": {
         "description": "Enforce dot notation whenever possible",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/dot-notation"
       },
       "fixable": "code",
@@ -6102,6 +6107,7 @@
       "docs": {
         "description": "Require function names to match the name of the variable or property to which they are assigned",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/func-name-matching"
       },
       "name": "func-name-matching",
@@ -6133,6 +6139,7 @@
       "docs": {
         "description": "Enforce the consistent use of either `function` declarations or expressions assigned to variables",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/func-style"
       },
       "name": "func-style",
@@ -6260,6 +6267,7 @@
       "docs": {
         "description": "Disallow specified identifiers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-denylist"
       },
       "name": "id-denylist",
@@ -6278,6 +6286,7 @@
       "docs": {
         "description": "Enforce minimum and maximum identifier lengths",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-length"
       },
       "name": "id-length",
@@ -6297,6 +6306,7 @@
       "docs": {
         "description": "Require identifiers to match a specified regular expression",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/id-match"
       },
       "name": "id-match",
@@ -6348,6 +6358,7 @@
       "docs": {
         "description": "Require or disallow initialization in variable declarations",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/init-declarations"
       },
       "name": "init-declarations",
@@ -6463,6 +6474,7 @@
       "docs": {
         "description": "Require or disallow logical assignment operator shorthand",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/logical-assignment-operators"
       },
       "fixable": "code",
@@ -6894,6 +6906,7 @@
       "docs": {
         "description": "Disallow `continue` statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-continue"
       },
       "name": "no-continue",
@@ -6935,6 +6948,7 @@
       "docs": {
         "description": "Disallow equal signs explicitly at the beginning of regular expressions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-div-regex"
       },
       "fixable": "code",
@@ -7016,6 +7030,7 @@
       "docs": {
         "description": "Disallow `else` blocks after `return` statements in `if` statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-else-return"
       },
       "fixable": "code",
@@ -7157,6 +7172,7 @@
       "docs": {
         "description": "Disallow unnecessary boolean casts",
         "recommended": true,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-extra-boolean-cast"
       },
       "fixable": "code",
@@ -7168,6 +7184,7 @@
       "docs": {
         "description": "Disallow unnecessary labels",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-extra-label"
       },
       "fixable": "code",
@@ -7260,6 +7277,7 @@
       "docs": {
         "description": "Disallow shorthand type conversions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-implicit-coercion"
       },
       "fixable": "code",
@@ -7318,6 +7336,7 @@
       "docs": {
         "description": "Disallow inline comments after code",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-inline-comments"
       },
       "name": "no-inline-comments",
@@ -7401,6 +7420,7 @@
       "docs": {
         "description": "Disallow labels that share a name with a variable",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-label-var"
       },
       "name": "no-label-var",
@@ -7417,6 +7437,7 @@
       "docs": {
         "description": "Disallow labeled statements",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-labels"
       },
       "name": "no-labels",
@@ -7437,6 +7458,7 @@
       "docs": {
         "description": "Disallow `if` statements as the only statement in `else` blocks",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-lonely-if"
       },
       "fixable": "code",
@@ -7468,6 +7490,7 @@
       "docs": {
         "description": "Disallow magic numbers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-magic-numbers"
       },
       "name": "no-magic-numbers",
@@ -7553,6 +7576,7 @@
       "docs": {
         "description": "Disallow multiline strings",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-multi-str"
       },
       "name": "no-multi-str",
@@ -7590,6 +7614,7 @@
       "docs": {
         "description": "Disallow negated conditions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-negated-condition"
       },
       "name": "no-negated-condition",
@@ -7614,6 +7639,7 @@
       "docs": {
         "description": "Disallow nested ternary expressions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-nested-ternary"
       },
       "name": "no-nested-ternary",
@@ -7783,6 +7809,7 @@
       "docs": {
         "description": "Disallow the unary operators `++` and `--`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-plusplus"
       },
       "name": "no-plusplus",
@@ -8116,6 +8143,7 @@
       "docs": {
         "description": "Disallow ternary operators",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-ternary"
       },
       "name": "no-ternary",
@@ -8174,6 +8202,7 @@
       "docs": {
         "description": "Disallow initializing variables to `undefined`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-undef-init"
       },
       "fixable": "code",
@@ -8185,6 +8214,7 @@
       "docs": {
         "description": "Disallow the use of `undefined` as an identifier",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-undefined"
       },
       "name": "no-undefined",
@@ -8208,6 +8238,7 @@
       "docs": {
         "description": "Disallow dangling underscores in identifiers",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-underscore-dangle"
       },
       "name": "no-underscore-dangle",
@@ -8243,6 +8274,7 @@
       "docs": {
         "description": "Disallow ternary operators when simpler alternatives exist",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-unneeded-ternary"
       },
       "fixable": "code",
@@ -8435,6 +8467,7 @@
       "docs": {
         "description": "Disallow unnecessary computed property keys in objects and classes",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-useless-computed-key"
       },
       "fixable": "code",
@@ -8446,6 +8479,7 @@
       "docs": {
         "description": "Disallow unnecessary concatenation of literals or template literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-useless-concat"
       },
       "name": "no-useless-concat",
@@ -8523,6 +8557,7 @@
       "docs": {
         "description": "Disallow `void` operators",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-void"
       },
       "name": "no-void",
@@ -8543,6 +8578,7 @@
       "docs": {
         "description": "Disallow specified warning terms in comments",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/no-warning-comments"
       },
       "name": "no-warning-comments",
@@ -8628,6 +8664,7 @@
       "docs": {
         "description": "Require or disallow method and property shorthand syntax for object literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/object-shorthand"
       },
       "fixable": "code",
@@ -8639,6 +8676,7 @@
       "docs": {
         "description": "Enforce variables to be declared either together or separately in functions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/one-var"
       },
       "fixable": "code",
@@ -8666,6 +8704,7 @@
       "docs": {
         "description": "Require or disallow assignment operator shorthand where possible",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/operator-assignment"
       },
       "fixable": "code",
@@ -8722,6 +8761,7 @@
       "docs": {
         "description": "Require using arrow functions for callbacks",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-arrow-callback"
       },
       "fixable": "code",
@@ -8750,6 +8790,7 @@
       "docs": {
         "description": "Require destructuring from arrays and/or objects",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-destructuring"
       },
       "fixable": "code",
@@ -8761,6 +8802,7 @@
       "docs": {
         "description": "Disallow the use of `Math.pow` in favor of the `**` operator",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-exponentiation-operator"
       },
       "fixable": "code",
@@ -8783,6 +8825,7 @@
       "docs": {
         "description": "Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-numeric-literals"
       },
       "fixable": "code",
@@ -8805,6 +8848,7 @@
       "docs": {
         "description": "Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-object-spread"
       },
       "fixable": "code",
@@ -8870,6 +8914,7 @@
       "docs": {
         "description": "Require spread operators instead of `.apply()`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-spread"
       },
       "fixable": null,
@@ -8881,6 +8926,7 @@
       "docs": {
         "description": "Require template literals instead of string concatenation",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/prefer-template"
       },
       "fixable": "code",
@@ -9044,8 +9090,9 @@
         }
       ],
       "docs": {
-        "description": "Enforce sorted import declarations within modules",
+        "description": "Enforce sorted `import` declarations within modules",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-imports"
       },
       "fixable": "code",
@@ -9067,6 +9114,7 @@
       "docs": {
         "description": "Require object keys to be sorted",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-keys"
       },
       "name": "sort-keys",
@@ -9082,6 +9130,7 @@
       "docs": {
         "description": "Require variables within the same declaration block to be sorted",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/sort-vars"
       },
       "fixable": "code",
@@ -9282,6 +9331,7 @@
       "docs": {
         "description": "Require `var` declarations be placed at the top of their containing scope",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/vars-on-top"
       },
       "name": "vars-on-top",
@@ -9338,6 +9388,7 @@
       "docs": {
         "description": "Require or disallow \"Yoda\" conditions",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.org/docs/latest/rules/yoda"
       },
       "fixable": "code",
@@ -10580,7 +10631,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure imports point to a file/module that can be resolved.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unresolved.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-unresolved.md"
       },
       "name": "import/no-unresolved",
       "plugin": "import"
@@ -10590,7 +10641,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure named imports correspond to a named export in the remote file.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/named.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/named.md"
       },
       "name": "import/named",
       "plugin": "import"
@@ -10600,7 +10651,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure a default export is present, given a default import.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/default.md"
       },
       "name": "import/default",
       "plugin": "import"
@@ -10610,7 +10661,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Ensure imported namespaces contain dereferenced properties as they are dereferenced.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/namespace.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/namespace.md"
       },
       "name": "import/namespace",
       "plugin": "import"
@@ -10620,7 +10671,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid namespace (a.k.a. \"wildcard\" `*`) imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-namespace.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-namespace.md"
       },
       "fixable": "code",
       "name": "import/no-namespace",
@@ -10631,7 +10682,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid any invalid exports, i.e. re-export of the same name.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/export.md"
       },
       "name": "import/export",
       "plugin": "import"
@@ -10641,7 +10692,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid the use of mutable exports with `var` or `let`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-mutable-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-mutable-exports.md"
       },
       "name": "import/no-mutable-exports",
       "plugin": "import"
@@ -10651,7 +10702,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure consistent use of file extension within the import path.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/extensions.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/extensions.md"
       },
       "name": "import/extensions",
       "plugin": "import"
@@ -10661,7 +10712,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Enforce which files can be imported in a given folder.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-restricted-paths.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-restricted-paths.md"
       },
       "name": "import/no-restricted-paths",
       "plugin": "import"
@@ -10671,7 +10722,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing the submodules of other modules.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-internal-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-internal-modules.md"
       },
       "name": "import/no-internal-modules",
       "plugin": "import"
@@ -10681,7 +10732,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Prefer named exports to be grouped together in a single export declaration.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/group-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/group-exports.md"
       },
       "name": "import/group-exports",
       "plugin": "import"
@@ -10691,7 +10742,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing packages through relative paths.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-relative-packages.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-relative-packages.md"
       },
       "fixable": "code",
       "name": "import/no-relative-packages",
@@ -10702,7 +10753,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid importing modules from parent directories.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-relative-parent-imports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-relative-parent-imports.md"
       },
       "name": "import/no-relative-parent-imports",
       "plugin": "import"
@@ -10712,7 +10763,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce or ban the use of inline type-only markers for named imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/consistent-type-specifier-style.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/consistent-type-specifier-style.md"
       },
       "fixable": "code",
       "name": "import/consistent-type-specifier-style",
@@ -10724,7 +10775,7 @@
         "category": "Static analysis",
         "description": "Forbid a module from importing itself.",
         "recommended": true,
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-self-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-self-import.md"
       },
       "name": "import/no-self-import",
       "plugin": "import"
@@ -10734,7 +10785,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid a module from importing a module with a dependency path back to itself.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-cycle.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-cycle.md"
       },
       "name": "import/no-cycle",
       "plugin": "import"
@@ -10744,7 +10795,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid named default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-named-default.md"
       },
       "name": "import/no-named-default",
       "plugin": "import"
@@ -10754,7 +10805,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid use of exported name as identifier of default export.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-as-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-named-as-default.md"
       },
       "name": "import/no-named-as-default",
       "plugin": "import"
@@ -10764,7 +10815,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid use of exported name as property of default export.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-as-default-member.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-named-as-default-member.md"
       },
       "name": "import/no-named-as-default-member",
       "plugin": "import"
@@ -10774,7 +10825,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid anonymous values as default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-anonymous-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-anonymous-default-export.md"
       },
       "name": "import/no-anonymous-default-export",
       "plugin": "import"
@@ -10784,7 +10835,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid importing a default export by a different name.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-rename-default.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-rename-default.md"
       },
       "name": "import/no-rename-default",
       "plugin": "import"
@@ -10794,7 +10845,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid modules without exports, or exports without matching import in another module.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unused-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-unused-modules.md"
       },
       "name": "import/no-unused-modules",
       "plugin": "import"
@@ -10804,7 +10855,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid CommonJS `require` calls and `module.exports` or `exports.*`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-commonjs.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-commonjs.md"
       },
       "name": "import/no-commonjs",
       "plugin": "import"
@@ -10814,7 +10865,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid AMD `require` and `define` calls.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-amd.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-amd.md"
       },
       "name": "import/no-amd",
       "plugin": "import"
@@ -10824,7 +10875,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid repeated import of the same module in multiple places.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-duplicates.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-duplicates.md"
       },
       "fixable": "code",
       "name": "import/no-duplicates",
@@ -10835,7 +10886,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure all imports appear before other statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/first.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/first.md"
       },
       "fixable": "code",
       "name": "import/first",
@@ -10846,7 +10897,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce the maximum number of dependencies a module can have.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/max-dependencies.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/max-dependencies.md"
       },
       "name": "import/max-dependencies",
       "plugin": "import"
@@ -10856,7 +10907,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid the use of extraneous packages.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-extraneous-dependencies.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-extraneous-dependencies.md"
       },
       "name": "import/no-extraneous-dependencies",
       "plugin": "import"
@@ -10866,7 +10917,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid import of modules using absolute paths.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-absolute-path.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-absolute-path.md"
       },
       "fixable": "code",
       "name": "import/no-absolute-path",
@@ -10877,7 +10928,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid Node.js builtin modules.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-nodejs-modules.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-nodejs-modules.md"
       },
       "name": "import/no-nodejs-modules",
       "plugin": "import"
@@ -10887,7 +10938,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid webpack loader syntax in imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-webpack-loader-syntax.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-webpack-loader-syntax.md"
       },
       "name": "import/no-webpack-loader-syntax",
       "plugin": "import"
@@ -10897,7 +10948,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a convention in module import order.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/order.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/order.md"
       },
       "fixable": "code",
       "name": "import/order",
@@ -10908,7 +10959,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a newline after import statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/newline-after-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/newline-after-import.md"
       },
       "fixable": "whitespace",
       "name": "import/newline-after-import",
@@ -10919,7 +10970,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Prefer a default export if module exports a single name or multiple names.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/prefer-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/prefer-default-export.md"
       },
       "name": "import/prefer-default-export",
       "plugin": "import"
@@ -10929,7 +10980,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid default exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-default-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-default-export.md"
       },
       "name": "import/no-default-export",
       "plugin": "import"
@@ -10939,7 +10990,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid named exports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-named-export.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-named-export.md"
       },
       "name": "import/no-named-export",
       "plugin": "import"
@@ -10949,7 +11000,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid `require()` calls with expressions.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-dynamic-require.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-dynamic-require.md"
       },
       "name": "import/no-dynamic-require",
       "plugin": "import"
@@ -10959,7 +11010,7 @@
       "docs": {
         "category": "Module systems",
         "description": "Forbid potentially ambiguous parse goal (`script` vs. `module`).",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/unambiguous.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/unambiguous.md"
       },
       "name": "import/unambiguous",
       "plugin": "import"
@@ -10969,7 +11020,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Forbid unassigned imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-unassigned-import.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-unassigned-import.md"
       },
       "name": "import/no-unassigned-import",
       "plugin": "import"
@@ -10979,7 +11030,7 @@
       "docs": {
         "category": "Static analysis",
         "description": "Forbid unnecessary path segments in import and require statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-useless-path-segments.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-useless-path-segments.md"
       },
       "fixable": "code",
       "name": "import/no-useless-path-segments",
@@ -10990,7 +11041,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Enforce a leading comment with the webpackChunkName for dynamic imports.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/dynamic-import-chunkname.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/dynamic-import-chunkname.md"
       },
       "hasSuggestions": true,
       "name": "import/dynamic-import-chunkname",
@@ -11002,7 +11053,7 @@
         "category": "Module systems",
         "description": "Forbid import statements with CommonJS module.exports.",
         "recommended": true,
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-import-module-exports.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-import-module-exports.md"
       },
       "fixable": "code",
       "name": "import/no-import-module-exports",
@@ -11013,7 +11064,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid empty named import blocks.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-empty-named-blocks.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-empty-named-blocks.md"
       },
       "fixable": "code",
       "hasSuggestions": true,
@@ -11025,7 +11076,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Ensure all exports appear after other statements.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/exports-last.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/exports-last.md"
       },
       "name": "import/exports-last",
       "plugin": "import"
@@ -11035,7 +11086,7 @@
       "docs": {
         "category": "Helpful warnings",
         "description": "Forbid imported names marked with `@deprecated` documentation tag.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/no-deprecated.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/no-deprecated.md"
       },
       "name": "import/no-deprecated",
       "plugin": "import"
@@ -11045,7 +11096,7 @@
       "docs": {
         "category": "Style guide",
         "description": "Replaced by `import-x/first`.",
-        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.5.1/docs/rules/imports-first.md"
+        "url": "https://github.com/un-ts/eslint-plugin-import-x/blob/v4.6.1/docs/rules/imports-first.md"
       },
       "fixable": "code",
       "deprecated": true,
@@ -12942,6 +12993,7 @@
         "url": "https://typescript-eslint.io/rules/consistent-indexed-object-style"
       },
       "fixable": "code",
+      "hasSuggestions": true,
       "name": "ts/consistent-indexed-object-style",
       "plugin": "ts"
     },
@@ -14233,7 +14285,6 @@
       "type": "problem",
       "docs": {
         "description": "Enforce consistent awaiting of returned promises",
-        "extendsBaseRule": "no-return-await",
         "recommended": {
           "strict": [
             "error-handling-correctness-only"
@@ -14270,7 +14321,6 @@
         "requiresTypeChecking": true,
         "url": "https://typescript-eslint.io/rules/strict-boolean-expressions"
       },
-      "fixable": "code",
       "hasSuggestions": true,
       "name": "ts/strict-boolean-expressions",
       "plugin": "ts"
@@ -16883,7 +16933,7 @@
     "test/prefer-vi-mocked": {
       "type": "suggestion",
       "docs": {
-        "description": "Prefer `vi.mocked()` over `fn as Mock`",
+        "description": "require `vi.mocked()` over `fn as Mock`",
         "requiresTypeChecking": true,
         "recommended": false,
         "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/prefer-vi-mocked.md"
@@ -17076,7 +17126,7 @@
     },
     "test/padding-around-test-blocks": {
       "docs": {
-        "description": "Enforce padding around afterAll blocks",
+        "description": "Enforce padding around `test` blocks",
         "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/padding-around-test-blocks.md"
       },
       "fixable": "whitespace",
@@ -17087,7 +17137,7 @@
     },
     "test/valid-expect-in-promise": {
       "docs": {
-        "description": "Require promises that have expectations in their chain to be valid",
+        "description": "require promises that have expectations in their chain to be valid",
         "url": "https://github.com/vitest-dev/eslint-plugin-vitest/blob/main/docs/rules/valid-expect-in-promise.md"
       },
       "type": "suggestion",
@@ -17266,6 +17316,7 @@
       "docs": {
         "description": "Enforce camelcase naming convention in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/camelcase.html",
         "category": null,
         "extensionSource": {
@@ -17463,6 +17514,7 @@
       "docs": {
         "description": "Enforce dot notation whenever possible in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/dot-notation.html",
         "category": null,
         "extensionSource": {
@@ -19054,6 +19106,7 @@
       "docs": {
         "description": "Disallow unnecessary concatenation of literals or template literals in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/no-useless-concat.html",
         "category": null,
         "extensionSource": {
@@ -19238,6 +19291,7 @@
       "docs": {
         "description": "Require or disallow method and property shorthand syntax for object literals in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/object-shorthand.html",
         "category": null,
         "extensionSource": {
@@ -19372,6 +19426,7 @@
       "docs": {
         "description": "Require template literals instead of string concatenation in `<template>`",
         "recommended": false,
+        "frozen": true,
         "url": "https://eslint.vuejs.org/rules/prefer-template.html",
         "category": null,
         "extensionSource": {
@@ -22169,7 +22224,6 @@
     {
       "filepath": "README.md",
       "globs": [
-        "**/*.md",
         "**/*.md"
       ],
       "configs": [
@@ -22212,7 +22266,6 @@
       "filepath": "rollup.config.ts",
       "globs": [
         "**/*.?([cm])ts",
-        "**/*.?([cm])ts",
         "**/*.config.?([cm])[jt]s?(x)"
       ],
       "configs": [
@@ -22224,7 +22277,6 @@
     {
       "filepath": "src/index.ts",
       "globs": [
-        "**/*.?([cm])ts",
         "**/*.?([cm])ts"
       ],
       "configs": [
@@ -22245,7 +22297,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1734478602316,
+    "lastUpdate": 1736707426211,
     "basePath": "",
     "configPath": ""
   }
