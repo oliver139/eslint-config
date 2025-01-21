@@ -91,6 +91,28 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
         },
       },
     },
+    {
+      name: "antfu/perfectionist/setup",
+      rules: {
+        "perfectionist/sort-imports": ["error", {
+          groups: [
+            "type",
+            ["parent-type", "sibling-type", "index-type"],
+            "builtin",
+            "external",
+            ["internal", "internal-type"],
+            ["parent", "sibling", "index"],
+            "side-effect",
+            "object",
+            "unknown",
+          ],
+          newlinesBetween: "ignore",
+          order: "asc",
+          type: "natural",
+          partitionByNewLine: true,
+        }],
+      },
+    },
   ];
 
   await ensurePackages([
