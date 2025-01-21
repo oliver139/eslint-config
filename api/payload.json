@@ -2473,10 +2473,10 @@
             ".vue"
           ],
           "parser": {
-            "version": "8.19.1",
+            "version": "8.21.0",
             "meta": {
               "name": "typescript-eslint/parser",
-              "version": "8.19.1"
+              "version": "8.21.0"
             }
           },
           "sourceType": "module"
@@ -3348,6 +3348,43 @@
         "ts/explicit-function-return-type": "off"
       },
       "index": 42
+    },
+    {
+      "name": "antfu/perfectionist/setup",
+      "rules": {
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            "groups": [
+              "type",
+              [
+                "parent-type",
+                "sibling-type",
+                "index-type"
+              ],
+              "builtin",
+              "external",
+              [
+                "internal",
+                "internal-type"
+              ],
+              [
+                "parent",
+                "sibling",
+                "index"
+              ],
+              "side-effect",
+              "object",
+              "unknown"
+            ],
+            "newlinesBetween": "ignore",
+            "order": "asc",
+            "type": "natural",
+            "partitionByNewLine": true
+          }
+        ]
+      },
+      "index": 43
     },
     {
       "name": "vue-a11y/base",
@@ -4487,7 +4524,7 @@
           "XSLTProcessor": false
         }
       },
-      "index": 43
+      "index": 44
     },
     {
       "name": "vue-a11y/rules",
@@ -5655,7 +5692,7 @@
         "vue-a11y/tabindex-no-positive": "warn",
         "vue-a11y/no-aria-hidden-on-focusable": "error"
       },
-      "index": 44
+      "index": 45
     }
   ],
   "rules": {
@@ -13500,6 +13537,17 @@
         "url": "https://typescript-eslint.io/rules/no-misused-promises"
       },
       "name": "ts/no-misused-promises",
+      "plugin": "ts"
+    },
+    "ts/no-misused-spread": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow using the spread operator when it might cause unexpected behavior",
+        "recommended": "strict",
+        "requiresTypeChecking": true,
+        "url": "https://typescript-eslint.io/rules/no-misused-spread"
+      },
+      "name": "ts/no-misused-spread",
       "plugin": "ts"
     },
     "ts/no-mixed-enums": {
@@ -22297,7 +22345,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1736707426211,
+    "lastUpdate": 1737435022924,
     "basePath": "",
     "configPath": ""
   }
