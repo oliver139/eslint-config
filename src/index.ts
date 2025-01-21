@@ -109,6 +109,7 @@ async function eslintConfigBuilder(options: Partial<configOptions> = {}): Promis
           newlinesBetween: "ignore",
           order: "asc",
           type: "natural",
+          partitionByComment: true,
           partitionByNewLine: true,
         }],
       },
