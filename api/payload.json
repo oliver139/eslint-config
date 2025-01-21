@@ -3380,6 +3380,7 @@
             "newlinesBetween": "ignore",
             "order": "asc",
             "type": "natural",
+            "partitionByComment": true,
             "partitionByNewLine": true
           }
         ]
@@ -22345,7 +22346,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1737435022924,
+    "lastUpdate": 1737441351743,
     "basePath": "",
     "configPath": ""
   }
